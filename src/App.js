@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import CounterClass from "./Component/CounterClass";
+import CounterHooks from "./Component/CounterHooks";
+import Form from "./Component/Form";
+import LifeCycle from "./Component/LifeCycle";
 
 function App() {
+  const [data, setData] = useState({});
+  const handleData = (data) => {
+    setData(data);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>workshop Hooks</h2>
+      {/* <CounterClass />
+      <CounterHooks /> */}
+      {/* <Form handleData={handleData} />
+      <h2>Name : {data.name} </h2>
+      <h2>LastNames: {data.lastName}</h2> */}
+      <LifeCycle />
     </div>
   );
 }
